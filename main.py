@@ -1,7 +1,7 @@
 import pickle
 from flask import Flask, render_template, request
 
-app = Flask(__name__, static_folder='build/static', template_folder='build')
+app = Flask(__name__)
 model = pickle.load(open("model.pkl", "rb"))
 
 @app.route('/')
